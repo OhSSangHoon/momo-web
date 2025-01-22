@@ -1,5 +1,5 @@
 import moment from "moment";
-import { default as React, default as React, useEffect, useState } from 'react';
+import { default as React, useEffect, useState } from 'react';
 import styled from "styled-components";
 import FloatingMenu from "../CrewMain/components/FloatingMenu";
 import Calendar from "./components/ScheduleCalendar";
