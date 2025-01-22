@@ -42,7 +42,6 @@ const Community = () => {
 
     return(
         <S.Container>
-            <Banner />
             <S.List>
                 <S.FloatingButton onClick={() => navigate('/crew/crewCommunity/write')} />
                 {posts.slice(0, visiblePosts).map((post, index) => (
