@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
-import Banner from "../activities/components/Banner";
+import { useNavigate } from 'react-router-dom';
 import * as S from "./Styles/Community.styles";
 
 const Community = () => {
+    const navigate = useNavigate();
     // 초기 게시물 데이터 추후 API로 데이터 받아오기
     const initialPosts = Array.from({ length: 12 }, (_, index) => ({
         id: index,
@@ -43,6 +44,7 @@ const Community = () => {
         <S.Container>
             <Banner />
             <S.List>
+                <S.FloatingButton onClick={() => navigate('/crew/crewCommunity/write')} />
                 {posts.slice(0, visiblePosts).map((post, index) => (
                 <S.ActivityCard key={post.id}>
                     <S.UserInfoContainer>

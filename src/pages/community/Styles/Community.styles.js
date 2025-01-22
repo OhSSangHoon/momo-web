@@ -106,3 +106,27 @@ export const Title = styled(RouterNavLink)`
     font-size: 15px;
     font-weight: 600;
 `;
+
+export const FloatingButton = styled.button`
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #352EAE;  // 메인 컬러
+    color: white;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+
+    &:hover {
+        background-color: #2A258A;
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+    }
+`;
