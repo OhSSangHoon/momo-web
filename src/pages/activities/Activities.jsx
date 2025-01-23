@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as S from "./Styles/Activities.styles";
-import Banner from "./components/Banner";
-
 
 const Activities = () => {
+    const navigate = useNavigate();
     // 초기 게시물 데이터 추후 API로 데이터 받아오기
     const initialPosts = Array.from({ length: 41 }, (_, index) => ({
         id: index,
@@ -45,6 +45,9 @@ const Activities = () => {
         <S.Container>
             <S.TotalPosts>{posts.length}개의 글</S.TotalPosts>
             <S.List>
+                <S.FloatingButton onClick={() => navigate('/crew/crewCommunity/write')}>
+                    글작성
+                </S.FloatingButton>
                 {posts.slice(0, visiblePosts).map((post, index) => (
                 <S.ActivityCard key={post.id}>
                     <S.ActivityImage to={`/crew/crewActivity/${post.id}`}/>

@@ -4,7 +4,6 @@ import styled from "styled-components";
 export const Container = styled.div`
     width:1024px;
     margin:0 auto;
-    border:1px solid red;
 `;
 
 export const List = styled.div`
@@ -110,7 +109,7 @@ export const Title = styled(RouterNavLink)`
 export const FloatingButton = styled.button`
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: 22%;
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -123,6 +122,8 @@ export const FloatingButton = styled.button`
     align-items: center;
     justify-content: center;
     z-index: 100;
+    transition: all 0.3s ease;
+
 
     &:hover {
         background-color: #2A258A;

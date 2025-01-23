@@ -119,3 +119,30 @@ export const Setting = styled.div`
 export const Link = styled(RouterNavLink)`
     border:1px solid red;
 `;
+
+
+export const FloatingButton = styled.button`
+    position: fixed;
+    bottom: 30px;
+    right: 22%;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #352EAE;  // 메인 컬러
+    color: white;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transition: all 0.3s ease;
+
+
+    &:hover {
+        background-color: #2A258A;
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+    }
+`;
